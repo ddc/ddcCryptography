@@ -22,19 +22,19 @@ cp = Cryptography()
     + But keep in mind that this private key will be needed to decode further strings
         ```
         @staticmethod
-        generate_private_key() -> str
+        cp.generate_private_key() -> str
         ```
 
 + ENCODE
     + Encodes a given string
         ```
-        encode(str_to_encode: str) -> str
+        cp.encode(str_to_encode: str) -> str
          ```     
 
 + DECODE
     + Decodes a given string
         ```
-        decode(str_to_decode: str) -> str
+        cp.decode(str_to_decode: str) -> str
         ```
 
 
@@ -59,3 +59,9 @@ poe coverage
 
 # License
 Released under the [MIT License](LICENSE)
+
+
+## Buy me a cup of coffee
+I know there are people out there that may want to donate just to show their appreciation. Thanks in advance!
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/donate/?business=MRJ2NVUGSK4EA&no_recurring=0&item_name=ddcCryptography&currency_code=USD)
