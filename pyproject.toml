@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "ddcCryptography"
-version = "1.0.3"
+version = "1.0.4"
 description = "Encode and Decode Strings"
 license = "MIT"
 readme = "README.md"
