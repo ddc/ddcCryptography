@@ -1,4 +1,4 @@
-# Few Utility Functions
+# Encode and Decode strings with Cryptography
 
 [![License](https://img.shields.io/github/license/ddc/ddcCryptography.svg?style=plastic)](https://github.com/ddc/ddcCryptography/blob/master/LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg?style=plastic)](https://www.python.org)
