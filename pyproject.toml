@@ -4,17 +4,21 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "ddcCryptography"
-version = "1.0.5"
+version = "1.0.6"
 description = "Encode and Decode Strings"
 license = "MIT"
 readme = "README.md"
 authors = ["Daniel Costa <danieldcsta@gmail.com>"]
 maintainers = ["Daniel Costa"]
 repository = "https://github.com/ddc/ddcCryptography"
-homepage = "https://github.com/ddc/ddcCryptography"
+homepage = "https://pypi.org/project/ddcCryptography"
 packages = [{include = "ddcCryptography"}]
 package-mode = true
-keywords = ["python3", "Cryptography", "ddcCryptography", "encode", "decode"]
+keywords = [
+    "python3", "python-3", "python",
+    "cryptography", "encode", "encoder",
+    "decode", "decoder", "ddcCryptography"
+]
 classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Development Status :: 5 - Production/Stable",
@@ -26,10 +30,14 @@ classifiers = [
     "Natural Language :: English",
 ]
 
+[tool.poetry.group.test]
+optional = true
+
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
-cryptography = ">=43.0.1"
+cryptography = ">=44.0.0"
+pytest = "^8.3.3"
 
 [tool.poetry.group.test.dependencies]
-pytest = ">=8.1.1"
-coverage = ">=7.4.4"
+coverage = ">=7.6.8"
+pytest = ">=8.3.3"

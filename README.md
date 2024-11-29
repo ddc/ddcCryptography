@@ -12,56 +12,69 @@ pip install ddcCryptography
 ```
 
 # Cryptography
-```python
-from ddcCryptography import Cryptography
-cp = Cryptography()
-```
+
 
 + GENERATE_PRIVATE_KEY
     + Generates a private key to be used instead of default one
-    + But keep in mind that this private key will be needed to decode further strings
-        ```
-        @staticmethod
-        cp.generate_private_key() -> str
-        ```
+    + But keep in mind that this private key WILL BE NEEDED TO DECODE FURTHER STRINGS
+    + Example of custom private key as "my_private_key" bellow
+
+```python
+from ddcCryptography import Cryptography
+cp = Cryptography()
+cp.generate_private_key()
+```
+
+
 
 + ENCODE
     + Encodes a given string
-        ```
-        cp.encode(str_to_encode: str) -> str
-         ```     
+```python
+from ddcCryptography import Cryptography
+str_to_encode = "test_str"
+cp = Cryptography()
+cp.encode(str_to_encode)
+```
+
+```python
+from ddcCryptography import Cryptography
+str_to_encode = "test_str"
+cp = Cryptography("my_private_key")
+cp.encode(str_to_encode)
+```
+ 
+
 
 + DECODE
     + Decodes a given string
-        ```
-        cp.decode(str_to_decode: str) -> str
-        ```
+```python
+from ddcCryptography import Cryptography
+str_to_decode = "gAAAAABnSdKi5V81C_8FkM_I1rW_zTuyfnxCvvZPGFoAoHWwKzceue8NopSpWm-pDAp9pwAIW3xPbACuOz_6AhZOcjs3NM7miw=="
+cp = Cryptography()
+cp.decode(str_to_decode)
+```
+
+```python
+from ddcCryptography import Cryptography
+str_to_decode = "gAAAAABnSdKi5V81C_8FkM_I1rW_zTuyfnxCvvZPGFoAoHWwKzceue8NopSpWm-pDAp9pwAIW3xPbACuOz_6AhZOcjs3NM7miw=="
+cp = Cryptography("my_private_key")
+cp.decode(str_to_decode)
+```
+
 
 
 # Source Code
 ### Build
 ```shell
-poetry build
+poetry build -f wheel
 ```
 
 
-### Run Tests
+### Run Tests and Get Coverage Report
 ```shell
-poetry run coverage run -m pytest -v
-```
-
-
-### Get Coverage Report
-```shell
-poetry run coverage report
+poetry run coverage run --omit=./tests/* --source=./ddcCryptography -m pytest -v && poetry run coverage report
 ```
 
 
 # License
 Released under the [MIT License](LICENSE)
-
-
-## Buy me a cup of coffee
-I know there are people out there that may want to donate just to show their appreciation. Thanks in advance!
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/donate/?business=MRJ2NVUGSK4EA&no_recurring=0&item_name=ddcCryptography&currency_code=USD)

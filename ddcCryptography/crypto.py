@@ -1,13 +1,15 @@
 # -*- encoding: utf-8 -*-
 import base64
 import os
+from typing import Optional
 from cryptography.fernet import Fernet, InvalidToken
 
 
 class Cryptography:
-    def __init__(self, private_key: str = None):
-        self.private_key = private_key or "sMZo38VwRdigN78FBnHj8mETNlofL4Qhj_x5cvyxJsc="
+    def __init__(self, private_key: Optional[str] = None) -> None:
+
         try:
+            self.private_key = private_key or "sMZo38VwRdigN78FBnHj8mETNlofL4Qhj_x5cvyxJsc="
             self.cipher_suite = Fernet(bytes(self.private_key, "UTF-8"))
         except ValueError as e:
             raise ValueError(str(e))
