@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "ddcCryptography"
-version = "1.0.7"
+version = "1.0.8"
 description = "Encode and Decode strings with Cryptography"
 license = "MIT"
 readme = "README.md"
@@ -36,7 +36,6 @@ optional = true
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
 cryptography = ">=44.0.0"
-pytest = "^8.3.3"
 
 [tool.poetry.group.test.dependencies]
 coverage = ">=7.6.8"
