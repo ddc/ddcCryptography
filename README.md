@@ -70,9 +70,10 @@ poetry build -f wheel
 ```
 
 
-# Run Tests and Get Coverage Report
+# Run Tests and Get Coverage Report using Poe
 ```shell
-poetry run coverage run --omit=./tests/* --source=./ddcCryptography -m pytest -v && poetry run coverage report
+poetry update --with test
+poe tests
 ```
 
 
