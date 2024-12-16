@@ -1,10 +1,13 @@
 # Encode and Decode strings with Cryptography
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-brightgreen.svg?style=plastic)](https://www.paypal.com/ncp/payment/6G9Z78QHUD4RJ)
 [![License](https://img.shields.io/github/license/ddc/ddcCryptography.svg)](https://github.com/ddc/ddcCryptography/blob/master/LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org)
 [![PyPi](https://img.shields.io/pypi/v/ddcCryptography.svg)](https://pypi.python.org/pypi/ddcCryptography)
 [![PyPI Downloads](https://static.pepy.tech/badge/ddcCryptography)](https://pepy.tech/projects/ddcCryptography)
+[![codecov](https://codecov.io/gh/ddc/ddcCryptography/graph/badge.svg?token=Q25ZT1URLS)](https://codecov.io/gh/ddc/ddcCryptography)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A//actions-badge.atrox.dev/ddc/ddcCryptography/badge?ref=main&label=build&logo=none)](https://actions-badge.atrox.dev/ddc/ddcCryptography/goto?ref=main)
+[![Python](https://img.shields.io/pypi/pyversions/ddcCryptography.svg)](https://www.python.org)
 
 
 # Install

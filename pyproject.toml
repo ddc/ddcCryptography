@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "ddcCryptography"
-version = "1.0.9"
+version = "1.0.10"
 description = "Encode and Decode strings with Cryptography"
 license = "MIT"
 readme = "README.md"
@@ -34,13 +34,13 @@ classifiers = [
 optional = true
 
 [tool.poetry.dependencies]
-python = ">=3.10,<4.0"
-cryptography = ">=44.0.0"
+python = "^3.10"
+cryptography = "^44.0.0"
 
 [tool.poetry.group.test.dependencies]
-coverage = ">=7.6.8"
-poethepoet = ">=0.31.1"
-pytest = ">=8.3.3"
+coverage = "^7.6.8"
+poethepoet = "^0.31.1"
+pytest = "^8.3.3"
 
 [tool.poe.tasks]
 _test = "poetry run coverage run --omit=./tests/* --source=./ddcCryptography -m pytest -v"
