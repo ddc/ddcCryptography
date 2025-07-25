@@ -1,4 +1,3 @@
-# -*- encoding: utf-8 -*-
 from cryptography.fernet import InvalidToken
 import pytest
 from ddcCryptography import Cryptography
@@ -30,10 +29,10 @@ class TestCryptography:
     def test_encode_int(self):
         to_encode = 1
         crypto = Cryptography(self.private_key)
-        with pytest.raises(TypeError) as exc_info:
+        with pytest.raises(AttributeError) as exc_info:
             crypto.encode(to_encode)
-        assert exc_info.value.args[0] == "encoding without a string argument"
-        assert exc_info.typename == "TypeError"
+        assert "'int' object has no attribute 'encode'" in str(exc_info.value)
+        assert exc_info.typename == "AttributeError"
 
     def test_decode(self):
         passw = "gAAAAABls-0f8Krl0SGvMrcJWv3fpa8cUfkcqb-yivz6KZS4jb0-N6K2AGkwq8GkVa5Btfpht9hiVVLcF8v0Vwj0_U2o799QbQ=="
@@ -64,3 +63,10 @@ class TestCryptography:
             crypto.decode(passw)
         assert exc_info.value.args[0] == "Encrypted with another private key"
         assert exc_info.typename == "InvalidToken"
+
+    def test_decode_empty_string(self):
+        crypto = Cryptography(self.private_key)
+        with pytest.raises(ValueError) as exc_info:
+            crypto.decode("")
+        assert exc_info.value.args[0] == "String to decode cannot be empty"
+        assert exc_info.typename == "ValueError"
