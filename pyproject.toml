@@ -53,6 +53,7 @@ test = ["tests"]
 
 [tool.coverage.run]
 omit = [
+    "build.py",
     "tests/*",
     "*/__init__.py",
 ]
